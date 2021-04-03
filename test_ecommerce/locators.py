@@ -2,8 +2,6 @@ from selenium.webdriver.common.by import By
 from abc import ABC
 
 
-from abc import ABC
-
 class WebLocators(ABC):
     def __init__(self, webdriver, url):
         self.webdriver = webdriver
