@@ -1,14 +1,10 @@
-from abc import ABC
-from locators import Locators
 from selenium.webdriver import Firefox
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
 from time import sleep
 from faker import Faker
-from test_ecommerce import Locators
+from test_ecommerce.locators import Locators
 
 
 class TestEcommerce(Locators):
