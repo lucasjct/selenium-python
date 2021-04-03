@@ -11,7 +11,6 @@ from faker import Faker
 from test_ecommerce import Locators
 
 
-
 class TestEcommerce(Locators):
     def test_home_page(self, produto):
         assert self.titulo_home in webdriver.title
