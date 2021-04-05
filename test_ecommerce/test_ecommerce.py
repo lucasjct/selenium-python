@@ -1,5 +1,6 @@
 from time import sleep
 from selenium.webdriver import Firefox
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
@@ -76,11 +77,16 @@ class TestEcommerce(Locators):
 
     def close_webdriver(self):
         webdriver.quit()
+        
 
 
 url = "http://automationpractice.com"
 
-webdriver = Firefox()
+options = Options() # A classe Option foi importada para permitir que configuremos as opções do navegador
+options.headless = True # no presente caso, foi configurada para roda no modo headless. depois de instaciada
+                        # a variável é usada como parâmetro do objeto da classe Webdriver.
+
+webdriver = Firefox(options=options)
 ecommerce = TestEcommerce(webdriver, url)
 
 ecommerce.open()
