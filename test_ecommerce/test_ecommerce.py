@@ -1,10 +1,10 @@
+from time import sleep
 from selenium.webdriver import Firefox
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
+from locators import Locators
 from faker import Faker
-from test_ecommerce.locators import Locators
 
 
 class TestEcommerce(Locators):

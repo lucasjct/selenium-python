@@ -1,19 +1,5 @@
 from selenium.webdriver.common.by import By
-from abc import ABC
-
-
-from abc import ABC
-
-class WebLocators(ABC):
-    def __init__(self, webdriver, url):
-        self.webdriver = webdriver
-        self.url = url
-
-    def open(self):
-        self.webdriver.get(self.url)
-
-    def find_element(self, locator):
-        self.webdriver.find_element(*locator)
+from weblocator import WebLocators
 
 
 class Locators(WebLocators):
@@ -41,3 +27,4 @@ class Locators(WebLocators):
     )
     login = (By.ID, "email_create")
     submmit = (By.ID, "SubmitCreate")
+    
