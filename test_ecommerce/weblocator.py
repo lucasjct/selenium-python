@@ -11,3 +11,4 @@ class WebLocators(ABC):
 
     def find_element(self, locator):
         self.webdriver.find_element(*locator)
+        

@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from weblocator import WebLocators
 
-
 class Locators(WebLocators):
 
     titulo_home = "My Store"
@@ -27,4 +26,3 @@ class Locators(WebLocators):
     )
     login = (By.ID, "email_create")
     submmit = (By.ID, "SubmitCreate")
-    
